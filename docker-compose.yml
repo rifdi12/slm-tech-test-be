@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/rifdi12/sinarmas-backend:latest
+    image: ghcr.io/rifdi12/slm-tech-test-be:latest
     container_name: mini-erp-backend
     restart: unless-stopped
     ports:
