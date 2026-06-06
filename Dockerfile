@@ -17,8 +17,6 @@ COPY --from=builder --chown=nestjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nestjs:nodejs /app/package*.json ./
 COPY --from=builder --chown=nestjs:nodejs /app/prisma ./prisma
 
-RUN mkdir -p /app/data && chown nestjs:nodejs /app/data
-
 USER nestjs
 
 EXPOSE 3001
