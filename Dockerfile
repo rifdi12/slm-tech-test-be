@@ -10,6 +10,7 @@ FROM node:20-alpine
 WORKDIR /app
 ENV NODE_ENV=production
 
+RUN apk add --no-cache openssl
 RUN addgroup -g 1001 -S nodejs && adduser -S nestjs -u 1001
 
 COPY --from=builder --chown=nestjs:nodejs /app/dist ./dist
