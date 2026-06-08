@@ -22,4 +22,4 @@ COPY --from=builder --chown=nestjs:nodejs /app/prisma ./prisma
 USER nestjs
 
 EXPOSE 3001
-CMD ["sh", "-c", "npx prisma db push && node dist/main"]
+CMD ["sh", "-c", "npx prisma db push && node dist/src/main"]
